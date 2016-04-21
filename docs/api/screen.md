@@ -1,6 +1,6 @@
 # screen
 
-Retrieve information about screen size, displays, cursor position, etc.
+> Retrieve information about screen size, displays, cursor position, etc.
 
 You cannot not use this module until the `ready` event of the
 `app` module is emitted (by invoking or requiring it).
