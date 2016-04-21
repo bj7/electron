@@ -1,5 +1,7 @@
 # The `<webview>` tag
 
+Display external web content in an isolated frame and process.
+
 Use the `webview` tag to embed 'guest' content (such as web pages) in your
 Electron app. The guest content is contained within the `webview` container.
 An embedded page within your app controls how the guest content is laid out and
@@ -47,17 +49,17 @@ and displays a "loading..." message during the load time:
 
 ## CSS Styling Notes
 
-Please note that the `webview` tag's style uses `display:flex;` internally to 
-ensure the child `object` element fills the full height and width of its `webview` 
-container when used with traditional and flexbox layouts (since v0.36.11). Please 
-do not overwrite the default `display:flex;` CSS property, unless specifying 
+Please note that the `webview` tag's style uses `display:flex;` internally to
+ensure the child `object` element fills the full height and width of its `webview`
+container when used with traditional and flexbox layouts (since v0.36.11). Please
+do not overwrite the default `display:flex;` CSS property, unless specifying
 `display:inline-flex;` for inline layout.
 
-`webview` has issues being hidden using the `hidden` attribute or using `display: none;`. 
-It can cause unusual rendering behaviour within its child `browserplugin` object 
-and the web page is reloaded, when the `webview` is un-hidden, as opposed to just 
-becoming visible again. The recommended approach is to hide the `webview` using 
-CSS by zeroing the `width` & `height` and allowing the element to shrink to the 0px 
+`webview` has issues being hidden using the `hidden` attribute or using `display: none;`.
+It can cause unusual rendering behaviour within its child `browserplugin` object
+and the web page is reloaded, when the `webview` is un-hidden, as opposed to just
+becoming visible again. The recommended approach is to hide the `webview` using
+CSS by zeroing the `width` & `height` and allowing the element to shrink to the 0px
 dimensions via `flex`.
 
 ```html
@@ -70,7 +72,7 @@ dimensions via `flex`.
   webview.hide {
     flex: 0 1;
     width: 0px;
-    height: 0px; 
+    height: 0px;
   }
 </style>
 ```

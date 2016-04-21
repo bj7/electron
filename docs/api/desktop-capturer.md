@@ -1,7 +1,7 @@
 # desktopCapturer
 
-The `desktopCapturer` module can be used to get available sources that can be
-used to be captured with `getUserMedia`.
+Capture audio, video, and images from a microphone, camera, or
+screen using the `getUserMedia` API.
 
 ```javascript
 // In the renderer process.
@@ -40,7 +40,7 @@ function getUserMediaError(e) {
 
 When creating a constraints object for the `navigator.webkitGetUserMedia` call,
 if you are using a source from `desktopCapturer` your `chromeMediaSource` must
-be set to `"desktop"` and your `audio` must be set to `false`. 
+be set to `"desktop"` and your `audio` must be set to `false`.
 
 If you wish to
 capture the audio and video from the entire desktop you can set
